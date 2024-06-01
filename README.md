@@ -57,21 +57,12 @@ File Structure
 
 The project has the following file structure:
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   cssCopy codesneaker-website/  ├── index.html  ├── styles/  │   ├── main.css  │  ├── app.js  │    │     ├── images/  │   ├── sneaker1.jpg  │   ├── sneaker2.jpg  │   └── ...  ├── README.md  └── LICENSE   `
-
 *   index.html: The main HTML file that contains the structure of the website.
     
-*   styles/: Directory containing CSS files for styling.
-    
-    *   main.css: Core styles for the website.
+* style.css: Core styles for the website.
         
-    *   responsive.css: Additional styles for responsive design.
         
-*   scripts/: Directory containing JavaScript files.
-    
-    *   main.js: Core JavaScript functionality.
-        
-    *   search.js: JavaScript for search and filter functionalities.
+* app.js: Core JavaScript functionality.
         
 *   images/: Directory containing images of the sneakers.
     
