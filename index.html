@@ -1,294 +1,537 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Shoe Haven</title>
-      <link rel="stylesheet" href="style.css">
-      <link rel="shortcut icon" href="images/logo.jpg">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-   </head>
-   <body>
-      <section>
-         <nav>
-            <div class="logo">
-               <h1>Shoe <span>Haven</span></h1>
-            </div>
-            <ul>
-               <li><a href="#Home">Home</a></li>
-               <li><a href="#Products">Products</a></li>
-               <li><a href="#About">About</a></li>
-               <li><a href="#Review">Review</a></li>
-               <li><a href="#Services">Services</a></li>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Haven - Premium Footwear Collection</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Shoe<span>Haven</span></a>
+            
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Shop</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
+            
             <div class="icons">
-               <i class="fa-solid fa-heart"></i>
-               <i class="fa-solid fa-cart-shopping"></i>
-               <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-moon" id="theme-toggle"></i>
+                <i class="fa-solid fa-search"></i>
+                <i class="fa-solid fa-shopping-cart cart-btn"></i>
+                <span class="cart-count">0</span>
             </div>
-         </nav>
-         <div class="main" id="Home">
-            <div class="main_content">
-               <div class="main_text">
-                  <h1>Latest<br><span>Collection</span></h1>
-                  <p>simply dummy text of the printing and typesetting industry.
-                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                     when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                     It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                     It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-                     and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                  </p>
-               </div>
-               <div class="main_image">
-                  <img src="images/mainimg.png">
-               </div>
+            
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <div class="social_icons">
-               <i class="fa-brands fa-facebook"></i>
-               <i class="fa-brands fa-instagram"></i>
-               <i class="fa-brands fa-twitter"></i>
-               <i class="fa-brands fa-snapchat"></i>
-               <i class="fa-brands fa-youtube"></i>
-               <i class="fa-brands fa-whatsapp"></i>
-               <i class="fa-brands fa-threads"></i>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Step Into <span>Style & Comfort</span></h1>
+                <p>Discover our premium collection of footwear designed for every occasion. Quality craftsmanship meets modern design.</p>
+                <div class="hero-btns">
+                    <a href="#products" class="btn primary-btn">Shop Now</a>
+                    <a href="#about" class="btn secondary-btn">Learn More</a>
+                </div>
             </div>
-            <div class="button">
-               <a href="#">SHOP NOW</a>
-               <i class="fa-solid fa-chevron-right"></i>
+            
+            <div class="hero-image">
+                <img src="images/hero-shoe.png" alt="Featured Shoe">
             </div>
-         </div>
-      </section>
-      <!--products section-->
-      <div class="products" id="products">
-         <h1>Products</h1>
-         <div class="box">
-            <div class="card">
-               <div class="small_card">
-                  <i class="fa-solid fa-heart"></i>
-                  <i class="fa-solid fa-share"></i>
-               </div>
-               <div class="image">
-                  <img src="images/shoes1.png" id="img">
-               </div>
-               <div class="products_text">
-                  <h2>SPORTY-PRO</h2>
-                  <p>
-                     the latest and very rare sporty variant of the brand
-                  </p>
-                  <h3>$200.0</h3>
-                  <div class="products_star">
-                     <i class="fa-solid fa-star"></i>
-                     <i class="fa-solid fa-star"></i>
-                     <i class="fa-solid fa-star"></i>
-                     <i class="fa-solid fa-star"></i>
-                     <i class="fa-solid fa-star"></i>
-                  </div>
-                  <a href="#" class="btn">Add To Cart</a>
-               </div>
+        </div>
+        
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="features-container">
+            <div class="feature">
+                <i class="fas fa-shipping-fast"></i>
+                <h3>Free Shipping</h3>
+                <p>Free shipping on all orders over $50</p>
             </div>
-            <!--product2-->
-            <div class="card">
-               <div class="small_card">
-                  <i class="fa-solid fa-heart"></i>
-                  <i class="fa-solid fa-share"></i>
-               </div>
-               <div class="image">
-                  <img src="images/shoes2.png" id="img">
-               </div>
-               <div class="products_text">
-                  <h2>SPORTY-PRO</h2>
-                  <p>
-                     the latest and very rare sporty variant of the brand
-                  </p>
-                  <h3>$200.0</h3>
-                  <div class="products_star">
-                     <i class="fa-solid fa-star"></i>
-                     <i class="fa-solid fa-star"></i>
-                     <i class="fa-solid fa-star"></i>
-                     <i class="fa-solid fa-star"></i>
-                     <i class="fa-solid fa-star"></i>
-                  </div>
-                  <a href="#" class="btn">Add To Cart</a>
-               </div>
+            
+            <div class="feature">
+                <i class="fas fa-undo"></i>
+                <h3>Easy Returns</h3>
+                <p>30-day easy return policy</p>
             </div>
-            <!--product 3-->
-            <div class="card">
-               <div class="small_card">
-                  <i class="fa-solid fa-heart"></i>
-                  <i class="fa-solid fa-share"></i>
-               </div>
-               <div class="image">
-                  <img src="images/shoes3.png" id="img">
-               </div>
-               <div class="products_text">
-                  <h2>SPORTY-PRO</h2>
-                  <p>
-                     the latest and very rare sporty variant of the brand
-                  </p>
-                  <h3>$200.0</h3>
-                  <div class="products_star">
-                     <i class="fa-solid fa-star"></i>
-                     <i class="fa-solid fa-star"></i>
-                     <i class="fa-solid fa-star"></i>
-                     <i class="fa-solid fa-star"></i>
-                     <i class="fa-solid fa-star"></i>
-                  </div>
-                  <a href="#" class="btn">Add To Cart</a>
-               </div>
+            
+            <div class="feature">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Secure Payment</h3>
+                <p>Your data is always protected</p>
             </div>
-            <!--product 4-->
-            <div class="card">
-               <div class="small_card">
-                  <i class="fa-solid fa-heart"></i>
-                  <i class="fa-solid fa-share"></i>
-               </div>
-               <div class="image">
-                  <img src="images/shoes4.png" id="img">
-               </div>
-               <div class="products_text">
-                  <h2>SPORTY-PRO</h2>
-                  <p>
-                     the latest and very rare sporty variant of the brand
-                  </p>
-                  <h3>$200.0</h3>
-                  <div class="products_star">
-                     <i class="fa-solid fa-star"></i>
-                     <i class="fa-solid fa-star"></i>
-                     <i class="fa-solid fa-star"></i>
-                     <i class="fa-solid fa-star"></i>
-                     <i class="fa-solid fa-star"></i>
-                  </div>
-                  <a href="#" class="btn">Add To Cart</a>
-               </div>
+            
+            <div class="feature">
+                <i class="fas fa-headset"></i>
+                <h3>24/7 Support</h3>
+                <p>Our support team is always here</p>
             </div>
-            <!--product 5-->
-            <div class="card">
-               <div class="small_card">
-                  <i class="fa-solid fa-heart"></i>
-                  <i class="fa-solid fa-share"></i>
-               </div>
-               <div class="image">
-                  <img src="images/shoes5.png" id="img">
-               </div>
-               <div class="products_text">
-                  <h2>SPORTY-PRO</h2>
-                  <p>
-                     the latest and very rare sporty variant of the brand
-                  </p>
-                  <h3>$200.0</h3>
-                  <div class="products_star">
-                     <i class="fa-solid fa-star"></i>
-                     <i class="fa-solid fa-star"></i>
-                     <i class="fa-solid fa-star"></i>
-                     <i class="fa-solid fa-star"></i>
-                     <i class="fa-solid fa-star"></i>
-                  </div>
-                  <a href="#" class="btn">Add To Cart</a>
-               </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="section-header">
+            <h2>Our Collection</h2>
+            <p>Explore our latest arrivals and bestsellers</p>
+        </div>
+        
+        <div class="filter-controls">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="running">Running</button>
+            <button class="filter-btn" data-filter="casual">Casual</button>
+            <button class="filter-btn" data-filter="formal">Formal</button>
+            <button class="filter-btn" data-filter="sports">Sports</button>
+        </div>
+        
+        <div class="product-container">
+            <!-- Product Card 1 -->
+            <div class="product-card" data-category="running" data-id="001">
+                <span class="badge">New</span>
+                <div class="product-actions">
+                    <button><i class="far fa-heart"></i></button>
+                    <button><i class="fas fa-eye"></i></button>
+                </div>
+                <div class="product-image">
+                    <img src="images/shoe-1.png" alt="Running Shoe">
+                </div>
+                <div class="product-info">
+                    <h3>Ultra Boost Runner</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(24)</span>
+                    </div>
+                    <p class="product-description">Lightweight running shoes with responsive cushioning.</p>
+                    <div class="product-price">
+                        <span class="price">$129.99</span>
+                        <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
             </div>
-            <!--product6-->
-            <div class="card">
-               <div class="small_card">
-                  <i class="fa-solid fa-heart"></i>
-                  <i class="fa-solid fa-share"></i>
-               </div>
-               <div class="image">
-                  <img src="images/shoes6.png" id="img">
-               </div>
-               <div class="products_text">
-                  <h2>SPORTY-PRO</h2>
-                  <p>
-                     the latest and very rare sporty variant of the brand
-                  </p>
-                  <h3>$200.0</h3>
-                  <div class="products_star">
-                     <i class="fa-solid fa-star"></i>
-                     <i class="fa-solid fa-star"></i>
-                     <i class="fa-solid fa-star"></i>
-                     <i class="fa-solid fa-star"></i>
-                     <i class="fa-solid fa-star"></i>
-                  </div>
-                  <a href="#" class="btn">Add To Cart</a>
-               </div>
+            
+            <!-- Product Card 2 -->
+            <div class="product-card" data-category="casual" data-id="002">
+                <div class="product-actions">
+                    <button><i class="far fa-heart"></i></button>
+                    <button><i class="fas fa-eye"></i></button>
+                </div>
+                <div class="product-image">
+                    <img src="images/shoe-2.png" alt="Casual Sneaker">
+                </div>
+                <div class="product-info">
+                    <h3>Classic Canvas</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(19)</span>
+                    </div>
+                    <p class="product-description">Timeless casual sneakers for everyday wear.</p>
+                    <div class="product-price">
+                        <span class="price">$79.99</span>
+                        <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
             </div>
-            <!--product 7-->
-            <div class="card">
-               <div class="small_card">
-                  <i class="fa-solid fa-heart"></i>
-                  <i class="fa-solid fa-share"></i>
-               </div>
-               <div class="image">
-                  <img src="images/shoes7.png" id="img">
-               </div>
-               <div class="products_text">
-                  <h2>SPORTY-PRO</h2>
-                  <p>
-                     the latest and very rare sporty variant of the brand
-                  </p>
-                  <h3>$200.0</h3>
-                  <div class="products_star">
-                     <i class="fa-solid fa-star"></i>
-                     <i class="fa-solid fa-star"></i>
-                     <i class="fa-solid fa-star"></i>
-                     <i class="fa-solid fa-star"></i>
-                     <i class="fa-solid fa-star"></i>
-                  </div>
-                  <a href="#" class="btn">Add To Cart</a>
-               </div>
+            
+            <!-- Product Card 3 -->
+            <div class="product-card" data-category="formal" data-id="003">
+                <div class="product-actions">
+                    <button><i class="far fa-heart"></i></button>
+                    <button><i class="fas fa-eye"></i></button>
+                </div>
+                <div class="product-image">
+                    <img src="images/shoe-3.png" alt="Formal Shoe">
+                </div>
+                <div class="product-info">
+                    <h3>Milano Leather Oxford</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(31)</span>
+                    </div>
+                    <p class="product-description">Premium leather oxford shoes for business attire.</p>
+                    <div class="product-price"></div>
+                        <span class="price">$159.99</span>
+                        <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
             </div>
-            <!--product8-->
-            <div class="card">
-               <div class="small_card">
-                  <i class="fa-solid fa-heart"></i>
-                  <i class="fa-solid fa-share"></i>
-               </div>
-               <div class="image">
-                  <img src="images/shoes8.png" id="img">
-               </div>
-               <div class="products_text">
-                  <h2>SPORTY-PRO</h2>
-                  <p>
-                     the latest and very rare sporty variant of the brand
-                  </p>
-                  <h3>$200.0</h3>
-                  <div class="products_star">
-                     <i class="fa-solid fa-star"></i>
-                     <i class="fa-solid fa-star"></i>
-                     <i class="fa-solid fa-star"></i>
-                     <i class="fa-solid fa-star"></i>
-                     <i class="fa-solid fa-star-half-stroke"></i>
-                  </div>
-                  <a href="#" class="btn">Add To Cart</a>
-               </div>
+            
+            <!-- Product Card 4 -->
+            <div class="product-card" data-category="sports" data-id="004">
+                <span class="badge">Sale</span>
+                <div class="product-actions">
+                    <button><i class="far fa-heart"></i></button>
+                    <button><i class="fas fa-eye"></i></button>
+                </div>
+                <div class="product-image">
+                    <img src="images/shoe-4.png" alt="Sports Shoe">
+                </div>
+                <div class="product-info">
+                    <h3>Air Max Trainer</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(16)</span>
+                    </div>
+                    <p class="product-description">Dynamic sports shoes with enhanced stability.</p>
+                    <div class="product-price">
+                        <span class="price">$99.99</span>
+                        <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
             </div>
-         </div>
-      </div>
-      <!--About -->
-      <div class="about" id="About">
-         <h1>Our <span>About</span></h1>
-         <div class="about_main">
-            <div class="about_image">
-               <div class="about_small_image">
-                  <img src="images/about1.png">
-                  <img src="images/about2.png">
-               </div>
-               <div class="image_container">
-                  <img src="images/" id="imagebox">
-               </div>
+            
+            <!-- Product Card 5 -->
+            <div class="product-card" data-category="running" data-id="005">
+                <div class="product-actions">
+                    <button><i class="far fa-heart"></i></button>
+                    <button><i class="fas fa-eye"></i></button>
+                </div>
+                <div class="product-image">
+                    <img src="images/shoe-5.png" alt="Running Shoe">
+                </div>
+                <div class="product-info">
+                    <h3>Swift Trail Runner</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
+                        <span>(12)</span>
+                    </div>
+                    <p class="product-description">Trail running shoes with rugged grip and durability.</p>
+                    <div class="product-price">
+                        <span class="price">$119.99</span>
+                        <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
             </div>
-            <div class="about_text">
-               <p>
-                  simply dummy text of the printing and typesetting industry.
-                  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                  when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                  It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                  It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-                  and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-               </p>
+            
+            <!-- Product Card 6 -->
+            <div class="product-card" data-category="casual" data-id="006">
+                <div class="product-actions">
+                    <button><i class="far fa-heart"></i></button>
+                    <button><i class="fas fa-eye"></i></button>
+                </div>
+                <div class="product-image">
+                    <img src="images/shoe-6.png" alt="Casual Shoe">
+                </div>
+                <div class="product-info">
+                    <h3>Urban Street Style</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(28)</span>
+                    </div>
+                    <p class="product-description">Contemporary street style sneakers for urban fashion.</p>
+                    <div class="product-price">
+                        <span class="price">$89.99</span>
+                        <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
             </div>
-         </div>
-         <a href="#" class="about_btn">Shop Now</a>
-         <script src="app.js"></script>
-      </div>
-   </body>
+        </div>
+        
+        <div class="view-more">
+            <a href="products.html" class="btn secondary-btn">View All Products</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-images">
+                <div class="image-gallery">
+                    <img src="images/about-1.jpg" alt="Shoe Manufacturing">
+                    <img src="images/about-2.jpg" alt="Shoe Design">
+                    <img src="images/about-3.jpg" alt="Shoe Material">
+                </div>
+                <div class="main-image">
+                    <img src="images/about-main.jpg" alt="Our Story" id="imagebox">
+                </div>
+            </div>
+            
+            <div class="about-content">
+                <h3>Our Passion for Quality Footwear</h3>
+                <p>Founded in 2010, Shoe Haven was born from a simple passion: to create footwear that combines style, comfort, and durability. We believe that shoes are more than just accessories – they're a foundation for your daily journey.</p>
+                <p>Our dedicated team of designers and craftsmen work tirelessly to bring you collections that meet the highest standards. We source premium materials from around the world and employ sustainable practices in our manufacturing process.</p>
+                <p>At Shoe Haven, we're committed to helping you put your best foot forward, one step at a time.</p>
+                <a href="about.html" class="btn primary-btn">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews">
+        <div class="section-header">
+            <h2>What Our Customers Say</h2>
+            <p>Hear from people who love our shoes</p>
+        </div>
+        
+        <div class="reviews-container">
+            <div class="review-card">
+                <div class="reviewer">
+                    <div class="avatar">
+                        <img src="images/avatar-1.jpg" alt="Customer">
+                    </div>
+                    <div class="reviewer-info">
+                        <h4>James Wilson</h4>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p>"I've been buying running shoes for years, but these Ultra Boosts are in a league of their own. The comfort is unmatched, and they've significantly improved my running experience."</p>
+            </div>
+            
+            <div class="review-card">
+                <div class="reviewer">
+                    <div class="avatar">
+                        <img src="images/avatar-2.jpg" alt="Customer">
+                    </div>
+                    <div class="reviewer-info">
+                        <h4>Sarah Johnson</h4>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <p>"The Classic Canvas shoes are my go-to for everyday wear. They match with everything in my wardrobe and are so comfortable I sometimes forget I'm wearing them!"</p>
+            </div>
+            
+            <div class="review-card">
+                <div class="reviewer">
+                    <div class="avatar">
+                        <img src="images/avatar-3.jpg" alt="Customer">
+                    </div>
+                    <div class="reviewer-info">
+                        <h4>Michael Brown</h4>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p>"As someone who wears formal shoes daily for work, finding the Milano Leather Oxfords was a game-changer. They're elegant, durable, and incredibly comfortable even after long days."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h2>Stay Updated</h2>
+            <p>Subscribe to our newsletter to receive updates on new arrivals, special offers, and exclusive discounts.</p>
+            <form class="subscribe-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit" class="primary-btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-header">
+            <h2>Get in Touch</h2>
+            <p>We'd love to hear from you</p>
+        </div>
+        
+        <div class="contact-container">
+            <div class="contact-form">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Your Name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Your Email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn primary-btn">Send Message</button>
+                </form>
+            </div>
+            
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Our Location</h4>
+                        <p>123 Fashion Street, Design District<br>New York, NY 10001</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <h4>Call Us</h4>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email Us</h4>
+                        <p>info@shoehaven.com</p>
+                    </div>
+                </div>
+                
+                <div class="store-hours">
+                    <h4>Store Hours</h4>
+                    <p>Monday - Friday: 9am - 8pm<br>
+                    Saturday: 10am - 6pm<br>
+                    Sunday: 12pm - 5pm</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>Shoe Haven</h4>
+                <p>Your destination for premium footwear that combines style, comfort, and quality craftsmanship.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="#">Running</a></li>
+                    <li><a href="#">Casual</a></li>
+                    <li><a href="#">Formal</a></li>
+                    <li><a href="#">Sports</a></li>
+                    <li><a href="#">New Arrivals</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2023 Shoe Haven. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        
+        <div class="cart-items">
+            <!-- Cart items will be added here dynamically -->
+        </div>
+        
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="cart-total-amount">$0.00</span>
+            </div>
+            
+            <div class="cart-buttons">
+                <a href="cart.html" class="btn secondary-btn">View Cart</a>
+                <a href="checkout.html" class="btn primary-btn">Checkout</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+</body>
 </html>
