@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultra Boost Runner - Shoe Haven</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Custom Product Detail CSS -->
+    <link rel="stylesheet" href="css/product-detail.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Shoe<span>Haven</span></a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#products">Shop</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            
+            <div class="icons">
+                <i class="fa-solid fa-moon" id="theme-toggle"></i>
+                <i class="fa-solid fa-search"></i>
+                <i class="fa-solid fa-shopping-cart cart-btn"></i>
+                <span class="cart-count">0</span>
+            </div>
+            
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#products">Products</a></li>
+                <li><a href="#">Running</a></li>
+                <li>Ultra Boost Runner</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail">
+        <div class="product-detail-container">
+            <!-- Product Gallery -->
+            <div class="product-gallery">
+                <div class="product-thumbnails">
+                    <div class="product-thumbnail active">
+                        <img src="images/shoe-1.png" alt="Ultra Boost Runner - Front View">
+                    </div>
+                    <div class="product-thumbnail">
+                        <img src="images/shoe-1-side.png" alt="Ultra Boost Runner - Side View">
+                    </div>
+                    <div class="product-thumbnail">
+                        <img src="images/shoe-1-back.png" alt="Ultra Boost Runner - Back View">
+                    </div>
+                    <div class="product-thumbnail">
+                        <img src="images/shoe-1-top.png" alt="Ultra Boost Runner - Top View">
+                    </div>
+                </div>
+                
+                <div class="main-product-image">
+                    <span class="badge">New</span>
+                    <img src="images/shoe-1.png" alt="Ultra Boost Runner">
+                    <button class="image-zoom-btn">
+                        <i class="fas fa-search-plus"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Product Info -->
+            <div class="product-info-details">
+                <span class="product-category">Running</span>
+                <h1>Ultra Boost Runner</h1>
+                
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>(24 reviews)</span>
+                </div>
+                
+                <span class="price">$129.99</span>
+                
+                <p class="description">
+                    Experience ultimate comfort with our Ultra Boost Runner. These lightweight running shoes feature responsive cushioning, breathable mesh upper, and a durable outsole for optimal performance on any terrain. Perfect for both casual runs and marathon training.
+                </p>
+                
+                <!-- Product Variants -->
+                <div class="product-variant-options">
+                    <div class="variant-section">
+                        <h3 class="variant-title">Select Size</h3>
+                        <div class="size-options">
+                            <div class="size-option">38</div>
+                            <div class="size-option">39</div>
+                            <div class="size-option active">40</div>
+                            <div class="size-option">41</div>
+                            <div class="size-option">42</div>
+                            <div class="size-option">43</div>
+                            <div class="size-option out-of-stock">44</div>
+                            <div class="size-option">45</div>
+                        </div>
+                        <a href="#" class="size-guide-link">Size Guide</a>
+                    </div>
+                    
+                    <div class="variant-section">
+                        <h3 class="variant-title">Select Color</h3>
+                        <div class="color-options">
+                            <div class="color-option active" style="background-color: #ff4d4d;"></div>
+                            <div class="color-option" style="background-color: #3498db;"></div>
+                            <div class="color-option" style="background-color: #2ecc71;"></div>
+                            <div class="color-option" style="background-color: #000000;"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quantity Input -->
+                <div class="quantity-input">
+                    <span>Quantity</span>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" data-operation="decrement">-</button>
+                        <input type="number" value="1" min="1" max="10">
+                        <button class="quantity-btn" data-operation="increment">+</button>
+                    </div>
+                </div>
+                
+                <!-- Product Actions -->
+                <div class="product-actions">
+                    <button class="btn primary-btn add-to-cart">
+                        <i class="fas fa-shopping-cart"></i> Add to Cart
+                    </button>
+                    <button class="btn secondary-btn">
+                        <i class="fas fa-bolt"></i> Buy Now
+                    </button>
+                    <button class="wishlist-btn">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+                
+                <!-- Product Meta -->
+                <div class="product-meta">
+                    <p><span>SKU:</span> UBR-2023-001</p>
+                    <p><span>Categories:</span> Running, Sports, New Arrivals</p>
+                    <p><span>Tags:</span> Lightweight, Comfortable, Performance</p>
+                    
+                    <!-- Social Share -->
+                    <div class="social-share">
+                        <span>Share:</span>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Delivery Info -->
+                <div class="delivery-info">
+                    <div class="info-item">
+                        <i class="fas fa-truck"></i>
+                        <span>Free shipping on orders over $50</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-sync-alt"></i>
+                        <span>30-day easy returns</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Product Tabs -->
+        <div class="product-tabs">
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-tab="description">Description</button>
+                <button class="tab-btn" data-tab="specifications">Specifications</button>
+                <button class="tab-btn" data-tab="reviews">Reviews (24)</button>
+            </div>
+            
+            <div class="tab-content active" id="description">
+                <h3>Product Description</h3>
+                <p>The Ultra Boost Runner is engineered for peak performance, offering unmatched comfort and energy return with every stride. The innovative cushioning system absorbs impact and propels you forward, making your run more efficient and enjoyable.</p>
+                
+                <h4>Key Features:</h4>
+                <ul>
+                    <li>Primeknit adaptive upper that flexes naturally with your foot</li>
+                    <li>Responsive Boost midsole for energy return</li>
+                    <li>Continental™ Rubber outsole for extraordinary grip in all conditions</li>
+                    <li>Lightweight construction reduces foot fatigue</li>
+                    <li>Breathable mesh keeps your feet cool during intense activity</li>
+                    <li>Molded heel counter provides a natural fit and optimal movement of the Achilles</li>
+                </ul>
+                
+                <h4>Ideal For:</h4>
+                <p>Daily training, long-distance runs, and marathon preparation. The durable construction ensures these shoes will stand up to regular use while providing consistent comfort and support.</p>
+            </div>
+            
+            <div class="tab-content" id="specifications">
+                <h3>Product Specifications</h3>
+                <table class="specs-table">
+                    <tr>
+                        <td>Weight</td>
+                        <td>310g (size 42)</td>
+                    </tr>
+                    <tr>
+                        <td>Upper Material</td>
+                        <td>Engineered Mesh with Primeknit</td>
+                    </tr>
+                    <tr>
+                        <td>Midsole</td>
+                        <td>Full-length Boost foam</td>
+                    </tr>
+                    <tr>
+                        <td>Outsole</td>
+                        <td>Continental™ Rubber</td>
+                    </tr>
+                    <tr>
+                        <td>Drop</td>
+                        <td>10mm</td>
+                    </tr>
+                    <tr>
+                        <td>Arch Support</td>
+                        <td>Neutral</td>
+                    </tr>
+                    <tr>
+                        <td>Best For</td>
+                        <td>Road Running, Training</td>
+                    </tr>
+                    <tr>
+                        <td>Technologies</td>
+                        <td>Boost, Primeknit, Torsion System</td>
+                    </tr>
+                    <tr>
+                        <td>Sustainability</td>
+                        <td>Made with recycled materials</td>
+                    </tr>
+                </table>
+                
+                <h3>Care Instructions</h3>
+                <ul>
+                    <li>Hand wash with mild soap and water</li>
+                    <li>Air dry away from direct heat</li>
+                    <li>Do not machine wash or tumble dry</li>
+                    <li>Do not bleach</li>
+                </ul>
+            </div>
+            
+            <div class="tab-content" id="reviews">
+                <h3>Customer Reviews</h3>
+                <div class="review-summary">
+                    <div class="average-rating">
+                        <span class="rating-number">4.5</span>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="review-count">Based on 24 reviews</span>
+                    </div>
+                    <div class="rating-bars">
+                        <div class="rating-bar">
+                            <span class="rating-level">5 stars</span>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 70%"></div>
+                            </div>
+                            <span class="percent">70%</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span class="rating-level">4 stars</span>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 20%"></div>
+                            </div>
+                            <span class="percent">20%</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span class="rating-level">3 stars</span>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 5%"></div>
+                            </div>
+                            <span class="percent">5%</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span class="rating-level">2 stars</span>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 3%"></div>
+                            </div>
+                            <span class="percent">3%</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span class="rating-level">1 star</span>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 2%"></div>
+                            </div>
+                            <span class="percent">2%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reviews-list">
+                    <div class="review-item">
+                        <div class="reviewer-info">
+                            <img src="images/avatar-1.jpg" alt="James Wilson">
+                            <div class="reviewer-details">
+                                <h4>James Wilson</h4>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="review-date">June 15, 2023</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <h5>Perfect for long runs!</h5>
+                            <p>I've been training for a marathon and these shoes have been a game-changer. The cushioning is perfect for long distances, and my feet don't feel tired even after 15+ miles. Highly recommend for serious runners.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="review-item">
+                        <div class="reviewer-info">
+                            <img src="images/avatar-2.jpg" alt="Sarah Johnson">
+                            <div class="reviewer-details">
+                                <h4>Sarah Johnson</h4>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="review-date">May 28, 2023</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <h5>Stylish and comfortable</h5>
+                            <p>Not only are these shoes great for running, but they look amazing with casual outfits too! I get compliments all the time. The fit is perfect, and they're so comfortable I sometimes forget I'm wearing them.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="review-item">
+                        <div class="reviewer-info">
+                            <img src="images/avatar-3.jpg" alt="Michael Brown">
+                            <div class="reviewer-details">
+                                <h4>Michael Brown</h4>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <span class="review-date">May 12, 2023</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <h5>Good but runs small</h5>
+                            <p>The shoes are great quality and very comfortable, but I had to exchange for a half size larger than my usual. Once I got the right size, they've been perfect for my daily 5k runs.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-pagination">
+                    <button class="pagination-btn active">1</button>
+                    <button class="pagination-btn">2</button>
+                    <button class="pagination-btn">3</button>
+                    <button class="pagination-btn next">
+                        <i class="fas fa-angle-right"></i>
+                    </button>
+                </div>
+                
+                <div class="write-review">
+                    <h3>Write a Review</h3>
+                    <form class="review-form">
+                        <div class="form-group">
+                            <label>Your Rating</label>
+                            <div class="rating-selector">
+                                <i class="far fa-star" data-rating="1"></i>
+                                <i class="far fa-star" data-rating="2"></i>
+                                <i class="far fa-star" data-rating="3"></i>
+                                <i class="far fa-star" data-rating="4"></i>
+                                <i class="far fa-star" data-rating="5"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="review-title">Review Title</label>
+                            <input type="text" id="review-title" placeholder="Give your review a title">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="review-content">Review</label>
+                            <textarea id="review-content" placeholder="Write your review here"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="review-name">Your Name</label>
+                            <input type="text" id="review-name" placeholder="Enter your name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="review-email">Email Address</label>
+                            <input type="email" id="review-email" placeholder="Enter your email">
+                        </div>
+                        
+                        <button type="submit" class="btn primary-btn">Submit Review</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Related Products -->
+        <div class="related-products">
+            <h2>You May Also Like</h2>
+            <div class="product-container">
+                <!-- Product Card 1 -->
+                <div class="product-card" data-category="running" data-id="002">
+                    <div class="product-actions">
+                        <button><i class="far fa-heart"></i></button>
+                        <button><i class="fas fa-eye"></i></button>
+                    </div>
+                    <div class="product-image">
+                        <img src="images/shoe-2.png" alt="Speed Racer">
+                    </div>
+                    <div class="product-info">
+                        <h3>Speed Racer</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(16)</span>
+                        </div>
+                        <p class="product-description">Lightweight racing shoes for track and field.</p>
+                        <div class="product-price">
+                            <span class="price">$119.99</span>
+                            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Card 2 -->
+                <div class="product-card" data-category="running" data-id="003">
+                    <span class="badge">New</span>
+                    <div class="product-actions">
+                        <button><i class="far fa-heart"></i></button>
+                        <button><i class="fas fa-eye"></i></button>
+                    </div>
+                    <div class="product-image">
+                        <img src="images/shoe-3.png" alt="Trail Blazer">
+                    </div>
+                    <div class="product-info">
+                        <h3>Trail Blazer</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(22)</span>
+                        </div>
+                        <p class="product-description">Rugged trail running shoes with superior grip.</p>
+                        <div class="product-price">
+                            <span class="price">$139.99</span>
+                            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Card 3 -->
+                <div class="product-card" data-category="sports" data-id="004">
+                    <div class="product-actions">
+                        <button><i class="far fa-heart"></i></button>
+                        <button><i class="fas fa-eye"></i></button>
+                    </div>
+                    <div class="product-image">
+                        <img src="images/shoe-4.png" alt="Gym Master">
+                    </div>
+                    <div class="product-info">
+                        <h3>Gym Master</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(14)</span>
+                        </div>
+                        <p class="product-description">Versatile training shoes for the gym and beyond.</p>
+                        <div class="product-price">
+                            <span class="price">$109.99</span>
+                            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h2>Stay Updated</h2>
+            <p>Subscribe to our newsletter to receive updates on new arrivals, special offers, and exclusive discounts.</p>
+            <form class="subscribe-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit" class="primary-btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>Shoe Haven</h4>
+                <p>Your destination for premium footwear that combines style, comfort, and quality craftsmanship.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="#">Running</a></li>
+                    <li><a href="#">Casual</a></li>
+                    <li><a href="#">Formal</a></li>
+                    <li><a href="#">Sports</a></li>
+                    <li><a href="#">New Arrivals</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2023 Shoe Haven. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        
+        <div class="cart-items">
+            <!-- Cart items will be added here dynamically -->
+        </div>
+        
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="cart-total-amount">$0.00</span>
+            </div>
+            
+            <div class="cart-buttons">
+                <a href="cart.html" class="btn secondary-btn">View Cart</a>
+                <a href="checkout.html" class="btn primary-btn">Checkout</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Zoom Modal -->
+    <div class="zoom-modal">
+        <div class="zoom-container">
+            <img src="images/shoe-1.png" alt="Ultra Boost Runner" id="zoom-image">
+            <button class="zoom-close-btn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+    <script src="js/product-detail.js"></script>
+</body>
+</html>

@@ -7,10 +7,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const backToTopBtn = document.querySelector('.back-to-top');
     
     // Toggle mobile menu
-    hamburger.addEventListener('click', function() {
-        hamburger.classList.toggle('active');
-        navLinks.classList.toggle('active');
-    });
+    if(hamburger) {
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+    }
     
     // Close mobile menu when clicking a link
     document.querySelectorAll('.nav-links a').forEach(link => {
@@ -24,109 +26,146 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', function() {
         if (window.scrollY > 50) {
             header.classList.add('scrolled');
-            backToTopBtn.classList.add('show');
+            if(backToTopBtn) backToTopBtn.classList.add('show');
         } else {
             header.classList.remove('scrolled');
-            backToTopBtn.classList.remove('show');
+            if(backToTopBtn) backToTopBtn.classList.remove('show');
         }
     });
     
     // Back to top button functionality
-    backToTopBtn.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
+    if(backToTopBtn) {
+        backToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
-    });
+    }
     
     // Theme toggle (dark/light mode)
-    themeToggle.addEventListener('click', function() {
-        document.body.classList.toggle('dark-theme');
-        
-        if (document.body.classList.contains('dark-theme')) {
-            themeToggle.classList.remove('fa-moon');
-            themeToggle.classList.add('fa-sun');
-            localStorage.setItem('theme', 'dark');
-        } else {
-            themeToggle.classList.remove('fa-sun');
-            themeToggle.classList.add('fa-moon');
-            localStorage.setItem('theme', 'light');
-        }
-    });
+    if(themeToggle) {
+        themeToggle.addEventListener('click', function() {
+            document.body.classList.toggle('dark-theme');
+            
+            if (document.body.classList.contains('dark-theme')) {
+                themeToggle.classList.remove('fa-moon');
+                themeToggle.classList.add('fa-sun');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeToggle.classList.remove('fa-sun');
+                themeToggle.classList.add('fa-moon');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    }
     
     // Check saved theme preference
     const savedTheme = localStorage.getItem('theme');
     
     if (savedTheme === 'dark') {
         document.body.classList.add('dark-theme');
-        themeToggle.classList.remove('fa-moon');
-        themeToggle.classList.add('fa-sun');
+        if(themeToggle) {
+            themeToggle.classList.remove('fa-moon');
+            themeToggle.classList.add('fa-sun');
+        }
     }
     
-    // Product filtering
+    // Product filtering with animation
     const filterButtons = document.querySelectorAll('.filter-btn');
     const productCards = document.querySelectorAll('.product-card');
     
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            // Remove active class from all buttons
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            
-            // Add active class to clicked button
-            button.classList.add('active');
-            
-            const filterValue = button.getAttribute('data-filter');
-            
-            productCards.forEach(card => {
-                if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-                    card.style.display = 'block';
-                    
-                    // Add animation
-                    card.style.opacity = '0';
-                    setTimeout(() => {
-                        card.style.opacity = '1';
-                        card.style.transform = 'translateY(0)';
-                    }, 10);
-                } else {
-                    card.style.opacity = '0';
-                    card.style.transform = 'translateY(20px)';
-                    setTimeout(() => {
-                        card.style.display = 'none';
-                    }, 300);
-                }
+    if(filterButtons.length > 0) {
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                const filterValue = button.getAttribute('data-filter');
+                
+                // Use Intersection Observer for smoother animations
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            setTimeout(() => {
+                                entry.target.style.opacity = '1';
+                                entry.target.style.transform = 'translateY(0)';
+                            }, 50);
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1 });
+                
+                productCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.style.display = 'block';
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        observer.observe(card);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
             });
         });
-    });
+    }
     
-    // About section image gallery
+    // About section image gallery with smooth transitions
     const galleryImages = document.querySelectorAll('.image-gallery img');
     const mainImage = document.getElementById('imagebox');
     
-    galleryImages.forEach(img => {
-        img.addEventListener('click', function() {
-            mainImage.src = this.src;
-            
-            // Add animation
-            mainImage.style.opacity = '0';
-            setTimeout(() => {
-                mainImage.style.opacity = '1';
-            }, 10);
+    if(galleryImages.length > 0 && mainImage) {
+        galleryImages.forEach(img => {
+            img.addEventListener('click', function() {
+                // Add fade-out effect
+                mainImage.style.opacity = '0';
+                
+                // Change image after fade out
+                setTimeout(() => {
+                    mainImage.src = this.src;
+                    
+                    // Fade in new image
+                    setTimeout(() => {
+                        mainImage.style.opacity = '1';
+                    }, 10);
+                }, 300);
+            });
         });
-    });
+    }
     
-    // Product hover effects
-    productCards.forEach(card => {
-        card.addEventListener('mouseenter', () => {
-            // Add some animation or effect
-            const image = card.querySelector('.product-image img');
-            image.style.transform = 'scale(1.05)';
+    // Product hover effects with GSAP animation
+    if(typeof gsap !== 'undefined' && productCards.length > 0) {
+        productCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const image = card.querySelector('.product-image img');
+                gsap.to(image, { scale: 1.05, duration: 0.3, ease: 'power2.out' });
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                const image = card.querySelector('.product-image img');
+                gsap.to(image, { scale: 1, duration: 0.3, ease: 'power2.out' });
+            });
         });
-        
-        card.addEventListener('mouseleave', () => {
-            const image = card.querySelector('.product-image img');
-            image.style.transform = 'scale(1)';
+    } else if(productCards.length > 0) {
+        productCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const image = card.querySelector('.product-image img');
+                image.style.transform = 'scale(1.05)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                const image = card.querySelector('.product-image img');
+                image.style.transform = 'scale(1)';
+            });
         });
-    });
+    }
     
     // Cart functionality
     const cartBtn = document.querySelector('.cart-btn');
