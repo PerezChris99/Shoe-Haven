@@ -19,3 +19,38 @@ body {
   color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+/* Fix for card sizing */
+.product-item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    height: 250px;
+    object-fit: contain;
+}
+
+/* Ensure all cards in a row have same height */
+.row-cols-1 > .col,
+.row-cols-md-2 > .col,
+.row-cols-md-3 > .col,
+.row-cols-lg-4 > .col {
+    margin-bottom: 30px;
+    display: flex;
+}
